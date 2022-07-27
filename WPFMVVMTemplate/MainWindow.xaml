@@ -4,9 +4,54 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFMVVMTemplate"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        xmlns:views="clr-namespace:WPFMVVMTemplate.MVVM.Views"
+        xmlns:vModels="clr-namespace:WPFMVVMTemplate.MVVM.ViewModels"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True"
+        Title="MainWindow" Height="450" MinHeight="350" Width="800" MinWidth="350" ResizeMode="CanResizeWithGrip">
+
+    <Grid Background="{Binding WindowBackgroundBrush, Source={StaticResource Theme}}">
+        
+        <Grid.RowDefinitions>
+            <!--Window title bar-->
+            <RowDefinition Height="30"/>
+            <!--Window content-->
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        
+        <Grid.Resources>
+            <DataTemplate DataType="{x:Type vModels:SettingsViewModel}">
+                <views:SettingsView/>
+            </DataTemplate>
+        </Grid.Resources>
+        
+        <!--Window title bar-->
+        <Grid Grid.Row="0" MouseMove="MouseDragWindow"
+              Background="{Binding WindowTitleBarBrush, Source={StaticResource Theme}}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            
+            <!--Window title bar text-->
+            <Label Content="My application name" HorizontalAlignment="Left" VerticalAlignment="Center"
+                   IsHitTestVisible="False" Margin="10,0"
+                   Foreground="{Binding ForegroundBrush, Source={StaticResource Theme}}"/>
+
+            <!--Window title bar buttons-->
+            <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal">
+
+                <Button Height="30" Width="30" Content="_" Command="{Binding MainWindowMinimizeCommand}"
+                        Style="{StaticResource WindowControlButton}" FontSize="16"/>
+                <Button Height="30" Width="30" Content="O" Command="{Binding MainWindowMaximizeCommand}"
+                        Style="{StaticResource WindowControlButton}" FontSize="16"/>
+                <Button Height="30" Width="30" Content="X" Command="{Binding MainWindowCloseCommand}"
+                        Style="{StaticResource WindowControlButton}" FontSize="16"/>
+
+            </StackPanel>
+        </Grid>
+
+        <ContentControl Grid.Row="1" Content="{Binding CurrentViewModel}"/>
 
     </Grid>
+    
 </Window>

@@ -15,14 +15,29 @@ using System.Windows.Shapes;
 
 namespace WPFMVVMTemplate
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
+
+            MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;
+        }
+
+        private void MouseDragWindow(object sender, MouseEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed && WindowState == WindowState.Maximized)
+            {
+                WindowState = WindowState.Normal;
+
+                var point = Mouse.GetPosition(null);
+
+                Top = point.Y;
+                Left = point.X - (Width / 2);
+
+            }
+            else if (e.LeftButton == MouseButtonState.Pressed && WindowState == WindowState.Normal) DragMove();
         }
     }
 }
