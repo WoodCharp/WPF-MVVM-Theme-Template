@@ -6,52 +6,78 @@
         xmlns:local="clr-namespace:WPFMVVMTemplate"
         xmlns:views="clr-namespace:WPFMVVMTemplate.MVVM.Views"
         xmlns:vModels="clr-namespace:WPFMVVMTemplate.MVVM.ViewModels"
+        xmlns:ib="clr-namespace:IconButtonControl;assembly=IconButtonControl"
+        xmlns:noti="clr-namespace:WPFMVVMTemplate.Notifications"
         mc:Ignorable="d" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True"
         Title="MainWindow" Height="450" MinHeight="350" Width="800" MinWidth="350" ResizeMode="CanResizeWithGrip">
 
     <Grid Background="{Binding WindowBackgroundBrush, Source={StaticResource Theme}}">
-        
+
         <Grid.RowDefinitions>
-            <!--Window title bar-->
-            <RowDefinition Height="30"/>
-            <!--Window content-->
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
         
         <Grid.Resources>
+            <DataTemplate DataType="{x:Type vModels:HomeViewModel}">
+                <views:HomeView/>
+            </DataTemplate>
             <DataTemplate DataType="{x:Type vModels:SettingsViewModel}">
                 <views:SettingsView/>
             </DataTemplate>
         </Grid.Resources>
         
         <!--Window title bar-->
-        <Grid Grid.Row="0" MouseMove="MouseDragWindow"
+        <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" 
               Background="{Binding WindowTitleBarBrush, Source={StaticResource Theme}}">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
-            
-            <!--Window title bar text-->
-            <Label Content="My application name" HorizontalAlignment="Left" VerticalAlignment="Center"
-                   IsHitTestVisible="False" Margin="10,0"
-                   Foreground="{Binding ForegroundBrush, Source={StaticResource Theme}}"/>
 
-            <!--Window title bar buttons-->
-            <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal">
+            <!--This border is for window DragMove(). Separetad it from window control buttons area, had some broblems with IconButtons-->
+            <Border Grid.Column="0" Grid.ColumnSpan="2" Background="Transparent" MouseMove="MouseDragWindow">
+                <!--Window title bar text-->
+                <Label Content="My application name" HorizontalAlignment="Left" VerticalAlignment="Center"
+                       IsHitTestVisible="False" Margin="10,0"
+                       Foreground="{Binding ForegroundBrush, Source={StaticResource Theme}}"/>
+            </Border>
 
-                <Button Height="30" Width="30" Content="_" Command="{Binding MainWindowMinimizeCommand}"
-                        Style="{StaticResource WindowControlButton}" FontSize="16"/>
-                <Button Height="30" Width="30" Content="O" Command="{Binding MainWindowMaximizeCommand}"
-                        Style="{StaticResource WindowControlButton}" FontSize="16"/>
-                <Button Height="30" Width="30" Content="X" Command="{Binding MainWindowCloseCommand}"
-                        Style="{StaticResource WindowControlButton}" FontSize="16"/>
+            <!--Window control buttons-->
+            <StackPanel Grid.Column="2" HorizontalAlignment="Right" Orientation="Horizontal">
+
+                <ib:IconButton Icon="{StaticResource gWindowControlMinimize}" IconMargin="2,6,2,2" VerticalAlignment="Bottom"
+                               Height="20" Width="20" Command="{Binding MainWindowMinimizeCommand}" Margin="3"/>
+                <ib:IconButton Icon="{StaticResource gWindowControlMaximize}" Margin="3"
+                               Height="20" Width="20" Command="{Binding MainWindowMaximizeCommand}"/>
+                <ib:IconButton Icon="{StaticResource gWindowControlClose}" Margin="3,3,10,3"
+                               Height="20" Width="20" Command="{Binding MainWindowCloseCommand}"/>
 
             </StackPanel>
         </Grid>
 
-        <ContentControl Grid.Row="1" Content="{Binding CurrentViewModel}"/>
+        <!--App menu buttons-->
+        <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Vertical">
 
+            <ib:IconButton Icon="{StaticResource gMenuHome}" Style="{StaticResource IBMenu}"
+                           Command="{Binding HomeViewCommand}"/>
+            <ib:IconButton Icon="{StaticResource gMenuSettings}" Style="{StaticResource IBMenu}"
+                           Command="{Binding SettingsViewCommand}"/>
+
+        </StackPanel>
+
+        <ContentControl Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Margin="2,2,10,2"
+                        Content="{Binding CurrentViewModel}"/>
+
+        <noti:NotificationControl Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" x:Name="notificationControl"/>
+        <noti:LoadingControl Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" x:Name="loadingControl"/>
+        <noti:MessageControl Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" x:Name="messageControl"/>
     </Grid>
     
 </Window>

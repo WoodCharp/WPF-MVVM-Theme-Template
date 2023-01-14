@@ -4,19 +4,63 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WPFMVVMTemplate.MVVM.Views"
-             xmlns:lang="clr-namespace:WPFMVVMTemplate.Properties.Languages"
+             xmlns:Lang="clr-namespace:WPFMVVMTemplate.Properties.Languages"
+             xmlns:vc="clr-namespace:ViewContentControls;assembly=ViewContentControls"
              mc:Ignorable="d">
 
-    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
 
-        <Button Content="{x:Static lang:Lang.darkTheme}" Command="{Binding DarkCommand}" Width="100" Height="30" Margin="0,10"/>
-        <Button Content="{x:Static lang:Lang.lightTheme}" Command="{Binding LightCommand}" Width="100" Height="30" Margin="0,10"/>
+    <Grid>
+        <vc:ViewContent ControlsOrientation="Vertical">
+            <vc:ViewContent.ControlsContent>
+                <StackPanel Orientation="Vertical">
 
-        <Label Content="{x:Static lang:Lang.restartText}" Margin="0,20,0,5"
-               Foreground="{Binding ForegroundBrush, Source={StaticResource Theme}}"
-               Visibility="Collapsed"/>
+                </StackPanel>
+            </vc:ViewContent.ControlsContent>
+            <vc:ViewContent.Content>
+                <StackPanel Orientation="Vertical">
 
-        <Button Content="en-US" Command="{Binding enCommand}" Width="100" Height="30" Margin="0,10" Visibility="Collapsed"/>
-        <Button Content="fi-FI" Command="{Binding fiCommand}" Width="100" Height="30" Margin="0,10" Visibility="Collapsed"/>
-    </StackPanel>
+                    <vc:ViewContentSection Header="UI" CollapseButtonVisible="False">
+                        <vc:ViewContentSection.Content>
+                            <StackPanel Orientation="Vertical">
+
+                                <vc:ViewContentSectionItem Header="{x:Static Lang:Lang.theme}">
+                                    <vc:ViewContentSectionItem.Content>
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                            </Grid.RowDefinitions>
+
+                                            <RadioButton Grid.Row="0" Content="{x:Static Lang:Lang.dark}" IsChecked="{Binding ThemeDark, UpdateSourceTrigger=PropertyChanged}"/>
+                                            <RadioButton Grid.Row="1" Content="{x:Static Lang:Lang.light}" IsChecked="{Binding ThemeLight, UpdateSourceTrigger=PropertyChanged}"/>
+
+                                        </Grid>
+                                    </vc:ViewContentSectionItem.Content>
+                                </vc:ViewContentSectionItem>
+
+                                <vc:ViewContentSectionItem Header="{x:Static Lang:Lang.language}">
+                                    <vc:ViewContentSectionItem.Content>
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                            </Grid.RowDefinitions>
+
+                                            <RadioButton Grid.Row="0" Content="{x:Static Lang:Lang.english}" IsChecked="{Binding LangEng, UpdateSourceTrigger=PropertyChanged}"/>
+                                            <RadioButton Grid.Row="1" Content="{x:Static Lang:Lang.finnish}" IsChecked="{Binding LangFi, UpdateSourceTrigger=PropertyChanged}"/>
+
+                                        </Grid>
+                                    </vc:ViewContentSectionItem.Content>
+                                </vc:ViewContentSectionItem>
+
+                            </StackPanel>
+                        </vc:ViewContentSection.Content>
+                    </vc:ViewContentSection>
+
+                </StackPanel>
+            </vc:ViewContent.Content>
+        </vc:ViewContent>
+    </Grid>
+    
 </UserControl>

@@ -1,9 +1,12 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using WPFMVVMTemplate.MVVM.Commands;
 using WPFMVVMTemplate.MVVM.Stores;
 using WPFMVVMTemplate.MVVM.ViewModels;
 using WPFMVVMTemplate.MVVM.Views;
+using WPFMVVMTemplate.Notifications;
 using WPFMVVMTemplate.Themes;
+using WPFMVVMTemplate.Properties.Languages;
 
 namespace WPFMVVMTemplate
 {
@@ -16,7 +19,7 @@ namespace WPFMVVMTemplate
             NavigationStore = new NavigationStore();
             Theme = new ThemeViewModel();
 
-            Settings = new ApplicationSettings(Properties.Settings.Default.Language);
+            Settings = new ApplicationSettings(Properties.Settings.Default.Theme, Properties.Settings.Default.Language);
         }
 
         #region Main window
@@ -59,19 +62,44 @@ namespace WPFMVVMTemplate
 
         public ThemeViewModel Theme { get; set; }
 
+        public EventHandler<ThemeEventArgs>? ThemeChanged { get; set; }
+        protected virtual void OnThemeChanged(ThemeEventArgs args) { ThemeChanged?.Invoke(this, args); }
+
         public void SetTheme(ColorSchema cs)
         {
+            Theme.SchemaName = cs.SchemaName;
+
             Theme.WindowTitleBarColor = cs.WindowTitleBarColor;
             Theme.WindowBackgroundColor = cs.WindowBackgroundColor;
+
+            Theme.PanelBackgroundColor = cs.PanelBackgroundColor;
+            Theme.PanelBorderColor = cs.PanelBorderColor;
+            Theme.PanelBorderHoverColor = cs.PanelBorderHoverColor;
+            Theme.PanelBorderPressedColor = cs.PanelBorderPressedColor;
 
             Theme.ForegroundColor = cs.ForegroundColor;
             Theme.ForegroundHoverColor = cs.ForegroundHoverColor;
             Theme.ForegroundPressedColor = cs.ForegroundPressedColor;
             Theme.ForegroundDisabledColor = cs.ForegroundDisabledColor;
+
+            Theme.ThemeColor = cs.ThemeColor;
+            Theme.ThemeHoverColor = cs.ThemeHoverColor;
+            Theme.ThemePressedColor = cs.ThemePressedColor;
+            Theme.ThemeDisabledColor = cs.ThemeDisabledColor;
+            Theme.ThemeForegroundColor = cs.ThemeForegroundColor;
+            Theme.ThemeForegroundDisabledColor = cs.ThemeForegroundDisabledColor;
+
+            Theme.DeleteColor = cs.DeleteColor;
+            Theme.DeleteHoverColor = cs.DeleteHoverColor;
+            Theme.DeletePressedColor = cs.DeletePressedColor;
+            Theme.DeleteDisabledColor = cs.DeleteDisabledColor;
+            Theme.DeleteForegroundColor = cs.DeleteForegroundColor;
+            Theme.DeleteForegroundDisabledColor = cs.DeleteForegroundDisabledColor;
+
+            OnThemeChanged(new ThemeEventArgs(cs));
         }
 
         #endregion
-
 
         #region Navigation
 
@@ -81,8 +109,30 @@ namespace WPFMVVMTemplate
         {
             switch(view)
             {
+                case View.Home: NavigationStore.CurrentViewModel = new HomeViewModel(this); break;
                 case View.Settings: NavigationStore.CurrentViewModel = new SettingsViewModel(this); break;
             }
+        }
+
+        #endregion
+
+        #region Settings
+
+        public void SettingsSetTheme(string theme)
+        {
+            Settings.Theme = theme;
+            Properties.Settings.Default.Theme = theme;
+            Properties.Settings.Default.Save();
+        }
+
+        public async void SettingsSetLanguage(string lang)
+        {
+            Settings.Language = lang;
+            Properties.Settings.Default.Language = lang;
+            Properties.Settings.Default.Save();
+
+            await Notification.ShowMessage(Lang.language, Lang.restartText,
+                MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         #endregion
@@ -91,10 +141,12 @@ namespace WPFMVVMTemplate
 
 public class ApplicationSettings
 {
+    public string Theme { get; set; }
     public string Language { get; set; }
 
-    public ApplicationSettings(string language)
+    public ApplicationSettings(string theme, string language)
     {
+        Theme = theme;
         Language = language;
     }
 }

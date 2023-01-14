@@ -117,13 +117,133 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="darkTheme" xml:space="preserve">
-    <value>Tumma teema</value>
+  <data name="button" xml:space="preserve">
+    <value>Painike</value>
   </data>
-  <data name="lightTheme" xml:space="preserve">
-    <value>Vaalea teema</value>
+  <data name="buttons" xml:space="preserve">
+    <value>Painikkeita</value>
+  </data>
+  <data name="checkBox" xml:space="preserve">
+    <value>Valintaruutu</value>
+  </data>
+  <data name="comboBox" xml:space="preserve">
+    <value>Yhdistelmälaatikko</value>
+  </data>
+  <data name="dark" xml:space="preserve">
+    <value>Tumma</value>
+  </data>
+  <data name="defCheckBox" xml:space="preserve">
+    <value>Vakio valintaruutu</value>
+  </data>
+  <data name="defComboBox" xml:space="preserve">
+    <value>Vakio yhdistelmälaatikko</value>
+  </data>
+  <data name="defHorizontalSlider" xml:space="preserve">
+    <value>Vakio vaakasuora liukusäädin</value>
+  </data>
+  <data name="defProgressBar" xml:space="preserve">
+    <value>Vakio edistymispalkki</value>
+  </data>
+  <data name="defRadioButton" xml:space="preserve">
+    <value>Vakio valintanappi</value>
+  </data>
+  <data name="defTabControl" xml:space="preserve">
+    <value>Vakio välilehden ohjain</value>
+  </data>
+  <data name="defToolTip" xml:space="preserve">
+    <value>Vakio työkaluvihje</value>
+  </data>
+  <data name="defVerticalSlider" xml:space="preserve">
+    <value>Vakio pystysuora liukusäädin</value>
+  </data>
+  <data name="deleteButton" xml:space="preserve">
+    <value>Poista painike</value>
+  </data>
+  <data name="disabled" xml:space="preserve">
+    <value>Pois käytöstä</value>
+  </data>
+  <data name="enabled" xml:space="preserve">
+    <value>Käytössä</value>
+  </data>
+  <data name="english" xml:space="preserve">
+    <value>Englanti</value>
+  </data>
+  <data name="finnish" xml:space="preserve">
+    <value>Suomi</value>
+  </data>
+  <data name="header" xml:space="preserve">
+    <value>Otsikko</value>
+  </data>
+  <data name="iconButton" xml:space="preserve">
+    <value>Kuvake painike</value>
+  </data>
+  <data name="iconToggleButton" xml:space="preserve">
+    <value>Kuvake valintaruutu</value>
+  </data>
+  <data name="item" xml:space="preserve">
+    <value>Kohde</value>
+  </data>
+  <data name="language" xml:space="preserve">
+    <value>Kieli</value>
+  </data>
+  <data name="light" xml:space="preserve">
+    <value>Vaalea</value>
+  </data>
+  <data name="loading" xml:space="preserve">
+    <value>Ladataan</value>
+  </data>
+  <data name="message" xml:space="preserve">
+    <value>Viesti</value>
+  </data>
+  <data name="messageText" xml:space="preserve">
+    <value>Viestin teksti</value>
+  </data>
+  <data name="messageTitle" xml:space="preserve">
+    <value>Viestin otsikko</value>
+  </data>
+  <data name="notification" xml:space="preserve">
+    <value>Ilmoitus</value>
+  </data>
+  <data name="notifications" xml:space="preserve">
+    <value>Ilmoitukset</value>
+  </data>
+  <data name="notificationText" xml:space="preserve">
+    <value>Ilmoituksen teksti</value>
+  </data>
+  <data name="progressBar" xml:space="preserve">
+    <value>Edistymispalkki</value>
+  </data>
+  <data name="radioButton" xml:space="preserve">
+    <value>Valintanappi</value>
   </data>
   <data name="restartText" xml:space="preserve">
-    <value>Uudelleen käynnistys vaaditaan jotta uusi valinta tulee voimaan.</value>
+    <value>Sovellus on käynnistettävä uudelleen jotta valittu kieli tulee voimaan.</value>
+  </data>
+  <data name="show" xml:space="preserve">
+    <value>Näytä</value>
+  </data>
+  <data name="slider" xml:space="preserve">
+    <value>Liukusäädin</value>
+  </data>
+  <data name="switch" xml:space="preserve">
+    <value>Kytkin</value>
+  </data>
+  <data name="switchSingleColor" xml:space="preserve">
+    <value>Yksivärinen kytkin</value>
+  </data>
+  <data name="tabControl" xml:space="preserve">
+    <value>Välilehden ohjain</value>
+  </data>
+  <data name="theme" xml:space="preserve">
+    <value>Teema</value>
+  </data>
+  <data name="toggleButtons" xml:space="preserve">
+    <value>Vaihtopainikkeet</value>
+  </data>
+  <data name="toolTip" xml:space="preserve">
+    <value>Työkaluvihje</value>
+  </data>
+  <data name="toolTipOnLabel" xml:space="preserve">
+    <value>Työkaluvihje etiketissä</value>
   </data>
 </root>

@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="WPFMVVMTemplate.Notifications.NotificationControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPFMVVMTemplate.Notifications"
+             xmlns:ib="clr-namespace:IconButtonControl;assembly=IconButtonControl"
+             mc:Ignorable="d" Width="Auto" Height="Auto" x:Name="root">
+
+    <Grid Background="{Binding ThemePressedBrush,Source={StaticResource Theme}}" Height="0"
+          x:Name="grid">
+
+        <ib:IconButton Style="{StaticResource CloseNotificationBtn}"
+                       Command="{Binding CloseCommand, ElementName=root}"/>
+        <TextBlock Style="{StaticResource CTextBlock}" HorizontalAlignment="Center" x:Name="tbText"
+                   Foreground="{Binding ThemeForegroundBrush, Source={StaticResource Theme}}"/>
+
+    </Grid>
+
+</UserControl>

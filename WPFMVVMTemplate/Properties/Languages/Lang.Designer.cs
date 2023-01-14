@@ -61,29 +61,389 @@ namespace WPFMVVMTemplate.Properties.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Dark theme.
+        ///   Looks up a localized string similar to Switch.
         /// </summary>
-        public static string darkTheme {
+        public static string _switch {
             get {
-                return ResourceManager.GetString("darkTheme", resourceCulture);
+                return ResourceManager.GetString("switch", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Light theme.
+        ///   Looks up a localized string similar to Button.
         /// </summary>
-        public static string lightTheme {
+        public static string button {
             get {
-                return ResourceManager.GetString("lightTheme", resourceCulture);
+                return ResourceManager.GetString("button", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Restart required to new language selection to take effect..
+        ///   Looks up a localized string similar to Buttons.
+        /// </summary>
+        public static string buttons {
+            get {
+                return ResourceManager.GetString("buttons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check box.
+        /// </summary>
+        public static string checkBox {
+            get {
+                return ResourceManager.GetString("checkBox", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Combo box.
+        /// </summary>
+        public static string comboBox {
+            get {
+                return ResourceManager.GetString("comboBox", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dark.
+        /// </summary>
+        public static string dark {
+            get {
+                return ResourceManager.GetString("dark", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Default check box.
+        /// </summary>
+        public static string defCheckBox {
+            get {
+                return ResourceManager.GetString("defCheckBox", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Default combo box.
+        /// </summary>
+        public static string defComboBox {
+            get {
+                return ResourceManager.GetString("defComboBox", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Default horizontal slider.
+        /// </summary>
+        public static string defHorizontalSlider {
+            get {
+                return ResourceManager.GetString("defHorizontalSlider", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Default progress bar.
+        /// </summary>
+        public static string defProgressBar {
+            get {
+                return ResourceManager.GetString("defProgressBar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Default radio button.
+        /// </summary>
+        public static string defRadioButton {
+            get {
+                return ResourceManager.GetString("defRadioButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Defeault tab control.
+        /// </summary>
+        public static string defTabControl {
+            get {
+                return ResourceManager.GetString("defTabControl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Default tool tip.
+        /// </summary>
+        public static string defToolTip {
+            get {
+                return ResourceManager.GetString("defToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Default vertical slider.
+        /// </summary>
+        public static string defVerticalSlider {
+            get {
+                return ResourceManager.GetString("defVerticalSlider", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete button.
+        /// </summary>
+        public static string deleteButton {
+            get {
+                return ResourceManager.GetString("deleteButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Disabled.
+        /// </summary>
+        public static string disabled {
+            get {
+                return ResourceManager.GetString("disabled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enabled.
+        /// </summary>
+        public static string enabled {
+            get {
+                return ResourceManager.GetString("enabled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to English.
+        /// </summary>
+        public static string english {
+            get {
+                return ResourceManager.GetString("english", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Finnish.
+        /// </summary>
+        public static string finnish {
+            get {
+                return ResourceManager.GetString("finnish", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Header.
+        /// </summary>
+        public static string header {
+            get {
+                return ResourceManager.GetString("header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Icon button.
+        /// </summary>
+        public static string iconButton {
+            get {
+                return ResourceManager.GetString("iconButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Icon toggle button.
+        /// </summary>
+        public static string iconToggleButton {
+            get {
+                return ResourceManager.GetString("iconToggleButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Item.
+        /// </summary>
+        public static string item {
+            get {
+                return ResourceManager.GetString("item", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Language.
+        /// </summary>
+        public static string language {
+            get {
+                return ResourceManager.GetString("language", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Light.
+        /// </summary>
+        public static string light {
+            get {
+                return ResourceManager.GetString("light", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loading.
+        /// </summary>
+        public static string loading {
+            get {
+                return ResourceManager.GetString("loading", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Message.
+        /// </summary>
+        public static string message {
+            get {
+                return ResourceManager.GetString("message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Message text.
+        /// </summary>
+        public static string messageText {
+            get {
+                return ResourceManager.GetString("messageText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Message title.
+        /// </summary>
+        public static string messageTitle {
+            get {
+                return ResourceManager.GetString("messageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Notification.
+        /// </summary>
+        public static string notification {
+            get {
+                return ResourceManager.GetString("notification", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Notifications.
+        /// </summary>
+        public static string notifications {
+            get {
+                return ResourceManager.GetString("notifications", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Notification text.
+        /// </summary>
+        public static string notificationText {
+            get {
+                return ResourceManager.GetString("notificationText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Progress bar.
+        /// </summary>
+        public static string progressBar {
+            get {
+                return ResourceManager.GetString("progressBar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Radio button.
+        /// </summary>
+        public static string radioButton {
+            get {
+                return ResourceManager.GetString("radioButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The application must be restarted for the selected language to take effect..
         /// </summary>
         public static string restartText {
             get {
                 return ResourceManager.GetString("restartText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show.
+        /// </summary>
+        public static string show {
+            get {
+                return ResourceManager.GetString("show", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Slider.
+        /// </summary>
+        public static string slider {
+            get {
+                return ResourceManager.GetString("slider", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Single color switch.
+        /// </summary>
+        public static string switchSingleColor {
+            get {
+                return ResourceManager.GetString("switchSingleColor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tab control.
+        /// </summary>
+        public static string tabControl {
+            get {
+                return ResourceManager.GetString("tabControl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Theme.
+        /// </summary>
+        public static string theme {
+            get {
+                return ResourceManager.GetString("theme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Toggle buttons.
+        /// </summary>
+        public static string toggleButtons {
+            get {
+                return ResourceManager.GetString("toggleButtons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tool tip.
+        /// </summary>
+        public static string toolTip {
+            get {
+                return ResourceManager.GetString("toolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tool tip on label.
+        /// </summary>
+        public static string toolTipOnLabel {
+            get {
+                return ResourceManager.GetString("toolTipOnLabel", resourceCulture);
             }
         }
     }

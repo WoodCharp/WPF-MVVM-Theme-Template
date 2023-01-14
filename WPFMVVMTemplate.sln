@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32611.2
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFMVVMTemplate", "WPFMVVMTemplate\WPFMVVMTemplate.csproj", "{F3A68AE1-B7BF-4B87-B1A5-102BC8A9B753}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFMVVMTemplate", "WPFMVVMTemplate\WPFMVVMTemplate.csproj", "{F3A68AE1-B7BF-4B87-B1A5-102BC8A9B753}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IconButtonControl", "IconButtonControl\IconButtonControl.csproj", "{14F85EC2-03C1-42AD-B23A-7B78A5D32C9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IconToggleButtonControl", "IconToggleButtonControl\IconToggleButtonControl.csproj", "{8031C833-E29C-4BEB-AD87-63486862FE4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwitchControl", "SwitchControl\SwitchControl.csproj", "{1AD797B9-2F87-44C0-ACA9-79A8C0781766}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewContentControls", "ViewContentControls\ViewContentControls.csproj", "{439B0310-D857-42C7-9F13-61DC9BA188CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +23,22 @@ Global
 		{F3A68AE1-B7BF-4B87-B1A5-102BC8A9B753}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3A68AE1-B7BF-4B87-B1A5-102BC8A9B753}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3A68AE1-B7BF-4B87-B1A5-102BC8A9B753}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14F85EC2-03C1-42AD-B23A-7B78A5D32C9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14F85EC2-03C1-42AD-B23A-7B78A5D32C9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14F85EC2-03C1-42AD-B23A-7B78A5D32C9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14F85EC2-03C1-42AD-B23A-7B78A5D32C9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8031C833-E29C-4BEB-AD87-63486862FE4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8031C833-E29C-4BEB-AD87-63486862FE4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8031C833-E29C-4BEB-AD87-63486862FE4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8031C833-E29C-4BEB-AD87-63486862FE4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AD797B9-2F87-44C0-ACA9-79A8C0781766}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AD797B9-2F87-44C0-ACA9-79A8C0781766}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AD797B9-2F87-44C0-ACA9-79A8C0781766}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AD797B9-2F87-44C0-ACA9-79A8C0781766}.Release|Any CPU.Build.0 = Release|Any CPU
+		{439B0310-D857-42C7-9F13-61DC9BA188CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{439B0310-D857-42C7-9F13-61DC9BA188CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{439B0310-D857-42C7-9F13-61DC9BA188CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{439B0310-D857-42C7-9F13-61DC9BA188CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

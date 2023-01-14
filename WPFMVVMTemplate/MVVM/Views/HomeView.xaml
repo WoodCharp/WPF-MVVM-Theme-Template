@@ -1,0 +1,546 @@
+﻿<UserControl x:Class="WPFMVVMTemplate.MVVM.Views.HomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPFMVVMTemplate.MVVM.Views"
+             xmlns:ib="clr-namespace:IconButtonControl;assembly=IconButtonControl"
+             xmlns:itb="clr-namespace:IconToggleButtonControl;assembly=IconToggleButtonControl"
+             xmlns:sw="clr-namespace:SwitchControl;assembly=SwitchControl"
+             xmlns:vc="clr-namespace:ViewContentControls;assembly=ViewContentControls"
+             xmlns:Lang="clr-namespace:WPFMVVMTemplate.Properties.Languages"
+             mc:Ignorable="d">
+
+    <vc:ViewContent>
+        <vc:ViewContent.Content>
+            <StackPanel Orientation="Vertical">
+
+                <vc:ViewContentSection Header="{x:Static Lang:Lang.buttons}">
+                    <vc:ViewContentSection.Content>
+                        <StackPanel Orientation="Vertical">
+
+                            <vc:ViewContentSectionItem Header="{x:Static Lang:Lang.button}">
+                                <vc:ViewContentSectionItem.Content>
+
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="1*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <TextBlock Grid.Row="0" Grid.Column="0" Text="{x:Static Lang:Lang.enabled}"
+                                                   Style="{StaticResource CTextBlock}"/>
+
+                                        <TextBlock Grid.Row="0" Grid.Column="1" Text="{x:Static Lang:Lang.disabled}"
+                                                   Style="{StaticResource CTextBlock}"/>
+
+                                        <Button Grid.Row="1" Grid.Column="0" Content="{x:Static Lang:Lang.button}"
+                                                Width="150"/>
+
+                                        <Button Grid.Row="1" Grid.Column="1" IsEnabled="False"
+                                                Width="150" Content="{x:Static Lang:Lang.button}"/>
+                                    </Grid>
+
+                                </vc:ViewContentSectionItem.Content>
+                            </vc:ViewContentSectionItem>
+
+                            <vc:ViewContentSectionItem Header="{x:Static Lang:Lang.deleteButton}">
+                                <vc:ViewContentSectionItem.Content>
+
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="1*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <TextBlock Grid.Row="0" Grid.Column="0" Text="{x:Static Lang:Lang.enabled}"
+                                                   Style="{StaticResource CTextBlock}"/>
+
+                                        <TextBlock Grid.Row="0" Grid.Column="1" Text="{x:Static Lang:Lang.disabled}"
+                                                   Style="{StaticResource CTextBlock}"/>
+
+                                        <Button Grid.Row="1" Grid.Column="0" Content="{x:Static Lang:Lang.button}"
+                                                Width="150" Style="{StaticResource DeleteButtonStyle}"/>
+
+                                        <Button Grid.Row="1" Grid.Column="1" IsEnabled="False"
+                                                Width="150" Style="{StaticResource DeleteButtonStyle}" Content="{x:Static Lang:Lang.button}"/>
+                                    </Grid>
+
+                                </vc:ViewContentSectionItem.Content>
+                            </vc:ViewContentSectionItem>
+
+                            <vc:ViewContentSectionItem Header="{x:Static Lang:Lang.iconButton}">
+                                <vc:ViewContentSectionItem.Content>
+
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="1*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <TextBlock Grid.Row="0" Grid.Column="0" Text="{x:Static Lang:Lang.enabled}"
+                                                   Style="{StaticResource CTextBlock}"/>
+
+                                        <TextBlock Grid.Row="0" Grid.Column="1" Text="{x:Static Lang:Lang.disabled}"
+                                                   Style="{StaticResource CTextBlock}"/>
+
+                                        <ib:IconButton Grid.Row="1" Grid.Column="0"
+                                                       Icon="{StaticResource gMenuHome}"/>
+
+                                        <ib:IconButton Grid.Row="1" Grid.Column="1" IsEnabled="False"
+                                                       Icon="{StaticResource gMenuHome}"/>
+                                    </Grid>
+                                    
+                                </vc:ViewContentSectionItem.Content>
+                            </vc:ViewContentSectionItem>
+                            
+                        </StackPanel>
+                    </vc:ViewContentSection.Content>
+                </vc:ViewContentSection>
+
+                <vc:ViewContentSection Header="{x:Static Lang:Lang.toggleButtons}">
+                    <vc:ViewContentSection.Content>
+                        <StackPanel Orientation="Vertical">
+
+                            <vc:ViewContentSectionItem Header="{x:Static Lang:Lang.defRadioButton}">
+                                <vc:ViewContentSectionItem.Content>
+
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="1*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <TextBlock Grid.Row="0" Grid.Column="0" Text="{x:Static Lang:Lang.enabled}"
+                                                   Style="{StaticResource CTextBlock}"/>
+
+                                        <TextBlock Grid.Row="0" Grid.Column="1" Text="{x:Static Lang:Lang.disabled}"
+                                                   Style="{StaticResource CTextBlock}"/>
+
+                                        <RadioButton Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center"
+                                                     Content="{x:Static Lang:Lang.radioButton}"/>
+                                        <RadioButton Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center"
+                                                     Content="{x:Static Lang:Lang.radioButton}"/>
+
+                                        <RadioButton Grid.Row="1" Grid.Column="1" IsEnabled="False" HorizontalAlignment="Center"
+                                                     Content="{x:Static Lang:Lang.radioButton}"/>
+                                    </Grid>
+
+                                </vc:ViewContentSectionItem.Content>
+                            </vc:ViewContentSectionItem>
+
+                            <vc:ViewContentSectionItem Header="{x:Static Lang:Lang.defCheckBox}">
+                                <vc:ViewContentSectionItem.Content>
+
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="1*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <TextBlock Grid.Row="0" Grid.Column="0" Text="{x:Static Lang:Lang.enabled}"
+                                                   Style="{StaticResource CTextBlock}"/>
+
+                                        <TextBlock Grid.Row="0" Grid.Column="1" Text="{x:Static Lang:Lang.disabled}"
+                                                   Style="{StaticResource CTextBlock}"/>
+
+                                        <CheckBox Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center"
+                                                  Content="{x:Static Lang:Lang.checkBox}"/>
+
+                                        <CheckBox Grid.Row="1" Grid.Column="1" IsEnabled="False" HorizontalAlignment="Center"
+                                                  Content="{x:Static Lang:Lang.checkBox}"/>
+                                    </Grid>
+
+                                </vc:ViewContentSectionItem.Content>
+                            </vc:ViewContentSectionItem>
+
+                            <vc:ViewContentSectionItem Header="{x:Static Lang:Lang.iconToggleButton}">
+                                <vc:ViewContentSectionItem.Content>
+
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="1*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <TextBlock Grid.Row="0" Grid.Column="0" Text="{x:Static Lang:Lang.enabled}"
+                                                   Style="{StaticResource CTextBlock}"/>
+
+                                        <TextBlock Grid.Row="0" Grid.Column="1" Text="{x:Static Lang:Lang.disabled}"
+                                                   Style="{StaticResource CTextBlock}"/>
+
+                                        <itb:IconToggleButton Grid.Row="1" Grid.Column="0"/>
+
+                                        <itb:IconToggleButton Grid.Row="1" Grid.Column="1" IsEnabled="False"/>
+                                    </Grid>
+
+                                </vc:ViewContentSectionItem.Content>
+                            </vc:ViewContentSectionItem>
+
+                            <vc:ViewContentSectionItem Header="{x:Static Lang:Lang._switch}">
+                                <vc:ViewContentSectionItem.Content>
+
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="1*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <TextBlock Grid.Row="0" Grid.Column="0" Text="{x:Static Lang:Lang.enabled}"
+                                                   Style="{StaticResource CTextBlock}"/>
+
+                                        <TextBlock Grid.Row="0" Grid.Column="1" Text="{x:Static Lang:Lang.disabled}"
+                                                   Style="{StaticResource CTextBlock}"/>
+
+                                        <sw:Switch Grid.Row="1" Grid.Column="0"/>
+
+                                        <sw:Switch Grid.Row="1" Grid.Column="1" IsEnabled="False"/>
+                                    </Grid>
+
+                                </vc:ViewContentSectionItem.Content>
+                            </vc:ViewContentSectionItem>
+
+                            <vc:ViewContentSectionItem Header="{x:Static Lang:Lang.switchSingleColor}">
+                                <vc:ViewContentSectionItem.Content>
+
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="1*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <TextBlock Grid.Row="0" Grid.Column="0" Text="{x:Static Lang:Lang.enabled}"
+                                                   Style="{StaticResource CTextBlock}"/>
+
+                                        <TextBlock Grid.Row="0" Grid.Column="1" Text="{x:Static Lang:Lang.disabled}"
+                                                   Style="{StaticResource CTextBlock}"/>
+
+                                        <sw:Switch Grid.Row="1" Grid.Column="0" UseSingleColor="True"/>
+
+                                        <sw:Switch Grid.Row="1" Grid.Column="1" IsEnabled="False" UseSingleColor="True"/>
+                                    </Grid>
+
+                                </vc:ViewContentSectionItem.Content>
+                            </vc:ViewContentSectionItem>
+
+                        </StackPanel>
+                    </vc:ViewContentSection.Content>
+                </vc:ViewContentSection>
+
+                <vc:ViewContentSection Header="{x:Static Lang:Lang.comboBox}">
+                    <vc:ViewContentSection.Content>
+                        <StackPanel Orientation="Vertical">
+
+                            <vc:ViewContentSectionItem Header="{x:Static Lang:Lang.defComboBox}">
+                                <vc:ViewContentSectionItem.Content>
+
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="1*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <TextBlock Grid.Row="0" Grid.Column="0" Text="{x:Static Lang:Lang.enabled}"
+                                                   Style="{StaticResource CTextBlock}"/>
+
+                                        <TextBlock Grid.Row="0" Grid.Column="1" Text="{x:Static Lang:Lang.disabled}"
+                                                   Style="{StaticResource CTextBlock}"/>
+
+                                        <ComboBox Grid.Row="1" Grid.Column="0" Width="100" HorizontalAlignment="Center">
+                                            <ComboBoxItem Content="{x:Static Lang:Lang.item}"/>
+                                            <ComboBoxItem Content="{x:Static Lang:Lang.item}"/>
+                                            <ComboBoxItem Content="{x:Static Lang:Lang.item}"/>
+                                            <ComboBoxItem Content="{x:Static Lang:Lang.item}"/>
+                                            <ComboBoxItem Content="{x:Static Lang:Lang.item}"/>
+                                        </ComboBox>
+
+                                        <ComboBox Grid.Row="1" Grid.Column="1" Width="100" IsEnabled="False" HorizontalAlignment="Center"/>
+                                    </Grid>
+
+                                </vc:ViewContentSectionItem.Content>
+                            </vc:ViewContentSectionItem>
+
+                        </StackPanel>
+                    </vc:ViewContentSection.Content>
+                </vc:ViewContentSection>
+
+                <vc:ViewContentSection Header="{x:Static Lang:Lang.progressBar}">
+                    <vc:ViewContentSection.Content>
+                        <StackPanel Orientation="Vertical">
+
+                            <vc:ViewContentSectionItem Header="{x:Static Lang:Lang.defProgressBar}">
+                                <vc:ViewContentSectionItem.Content>
+
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="1*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <TextBlock Grid.Row="0" Grid.Column="0" Text="{x:Static Lang:Lang.enabled}"
+                                                   Style="{StaticResource CTextBlock}"/>
+
+                                        <TextBlock Grid.Row="0" Grid.Column="1" Text="{x:Static Lang:Lang.disabled}"
+                                                   Style="{StaticResource CTextBlock}"/>
+
+                                        <ProgressBar Grid.Row="1" Grid.Column="0" Width="150" HorizontalAlignment="Center"
+                                                     Minimum="0" Maximum="100" Value="50"/>
+
+                                        <ProgressBar Grid.Row="1" Grid.Column="1" Width="150" IsEnabled="False"
+                                                     Minimum="0" Maximum="100" Value="50" HorizontalAlignment="Center"/>
+                                    </Grid>
+
+                                </vc:ViewContentSectionItem.Content>
+                            </vc:ViewContentSectionItem>
+
+                        </StackPanel>
+                    </vc:ViewContentSection.Content>
+                </vc:ViewContentSection>
+
+                <vc:ViewContentSection Header="{x:Static Lang:Lang.slider}">
+                    <vc:ViewContentSection.Content>
+                        <StackPanel Orientation="Vertical">
+
+                            <vc:ViewContentSectionItem Header="{x:Static Lang:Lang.defHorizontalSlider}">
+                                <vc:ViewContentSectionItem.Content>
+
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="1*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <TextBlock Grid.Row="0" Grid.Column="0" Text="{x:Static Lang:Lang.enabled}"
+                                                   Style="{StaticResource CTextBlock}"/>
+
+                                        <TextBlock Grid.Row="0" Grid.Column="1" Text="{x:Static Lang:Lang.disabled}"
+                                                   Style="{StaticResource CTextBlock}"/>
+
+                                        <Slider Grid.Row="1" Grid.Column="0" Width="150" HorizontalAlignment="Center"
+                                                Minimum="0" Maximum="100" Value="50" Orientation="Horizontal"/>
+
+                                        <Slider Grid.Row="1" Grid.Column="1" Width="150" IsEnabled="False"
+                                                Minimum="0" Maximum="100" Value="50" HorizontalAlignment="Center"
+                                                Orientation="Horizontal"/>
+                                    </Grid>
+
+                                </vc:ViewContentSectionItem.Content>
+                            </vc:ViewContentSectionItem>
+
+                            <vc:ViewContentSectionItem Header="{x:Static Lang:Lang.defVerticalSlider}">
+                                <vc:ViewContentSectionItem.Content>
+
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="1*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <TextBlock Grid.Row="0" Grid.Column="0" Text="{x:Static Lang:Lang.enabled}"
+                                                   Style="{StaticResource CTextBlock}"/>
+
+                                        <TextBlock Grid.Row="0" Grid.Column="1" Text="{x:Static Lang:Lang.disabled}"
+                                                   Style="{StaticResource CTextBlock}"/>
+
+                                        <Slider Grid.Row="1" Grid.Column="0" Height="150" HorizontalAlignment="Center"
+                                                Minimum="0" Maximum="100" Value="50" Orientation="Vertical"/>
+
+                                        <Slider Grid.Row="1" Grid.Column="1" Height="150" IsEnabled="False"
+                                                Minimum="0" Maximum="100" Value="50" HorizontalAlignment="Center"
+                                                Orientation="Vertical"/>
+                                    </Grid>
+
+                                </vc:ViewContentSectionItem.Content>
+                            </vc:ViewContentSectionItem>
+
+                        </StackPanel>
+                    </vc:ViewContentSection.Content>
+                </vc:ViewContentSection>
+
+                <vc:ViewContentSection Header="{x:Static Lang:Lang.tabControl}">
+                    <vc:ViewContentSection.Content>
+                        <StackPanel Orientation="Vertical">
+
+                            <vc:ViewContentSectionItem Header="{x:Static Lang:Lang.defTabControl}">
+                                <vc:ViewContentSectionItem.Content>
+
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="1*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <TextBlock Grid.Row="0" Grid.Column="0" Text="{x:Static Lang:Lang.enabled}"
+                                                   Style="{StaticResource CTextBlock}"/>
+
+                                        <TextBlock Grid.Row="0" Grid.Column="1" Text="{x:Static Lang:Lang.disabled}"
+                                                   Style="{StaticResource CTextBlock}"/>
+
+                                        <TabControl Grid.Row="1" Grid.Column="0" Margin="10" HorizontalAlignment="Center">
+                                            <TabItem Header="Header 1">
+                                                <Label Content="Label 1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </TabItem>
+                                            <TabItem Header="Header 2">
+                                                <Label Content="Label 2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </TabItem>
+                                        </TabControl>
+
+                                        <TabControl Grid.Row="1" Grid.Column="1" Margin="10" IsEnabled="False" HorizontalAlignment="Center">
+                                            <TabItem Header="Header 1">
+                                                <Label Content="Label 1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </TabItem>
+                                            <TabItem Header="Header 2">
+                                                <Label Content="Label 2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </TabItem>
+                                        </TabControl>
+                                    </Grid>
+
+                                </vc:ViewContentSectionItem.Content>
+                            </vc:ViewContentSectionItem>
+
+                        </StackPanel>
+                    </vc:ViewContentSection.Content>
+                </vc:ViewContentSection>
+
+                <vc:ViewContentSection Header="{x:Static Lang:Lang.toolTip}">
+                    <vc:ViewContentSection.Content>
+                        <StackPanel Orientation="Vertical">
+
+                            <vc:ViewContentSectionItem Header="{x:Static Lang:Lang.defToolTip}">
+                                <vc:ViewContentSectionItem.Content>
+
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="1*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Label Content="{x:Static Lang:Lang.toolTip}" Grid.Row="0" Grid.Column="0" Margin="10" HorizontalAlignment="Center"
+                                               ToolTip="{x:Static Lang:Lang.toolTipOnLabel}"/>
+                                    </Grid>
+
+                                </vc:ViewContentSectionItem.Content>
+                            </vc:ViewContentSectionItem>
+
+                        </StackPanel>
+                    </vc:ViewContentSection.Content>
+                </vc:ViewContentSection>
+
+                <vc:ViewContentSection Header="{x:Static Lang:Lang.notifications}">
+                    <vc:ViewContentSection.Content>
+                        <StackPanel Orientation="Vertical">
+
+                            <vc:ViewContentSectionItem Header="{x:Static Lang:Lang.loading}">
+                                <vc:ViewContentSectionItem.Content>
+
+                                    <Grid>
+                                        <Button Content="Show" Width="150" HorizontalAlignment="Left"
+                                                Command="{Binding ShowLoadingCommand}"/>
+                                    </Grid>
+
+                                </vc:ViewContentSectionItem.Content>
+                            </vc:ViewContentSectionItem>
+
+                            <vc:ViewContentSectionItem Header="{x:Static Lang:Lang.message}">
+                                <vc:ViewContentSectionItem.Content>
+
+                                    <Grid>
+                                        <Button Content="Show" Width="150" HorizontalAlignment="Left"
+                                                Command="{Binding ShowMessageCommand}"/>
+                                    </Grid>
+
+                                </vc:ViewContentSectionItem.Content>
+                            </vc:ViewContentSectionItem>
+
+                            <vc:ViewContentSectionItem Header="{x:Static Lang:Lang.notification}">
+                                <vc:ViewContentSectionItem.Content>
+
+                                    <Grid>
+                                        <Button Content="Show" Width="150" HorizontalAlignment="Left"
+                                                Command="{Binding ShowNotificationCommand}"/>
+                                    </Grid>
+
+                                </vc:ViewContentSectionItem.Content>
+                            </vc:ViewContentSectionItem>
+
+                        </StackPanel>
+                    </vc:ViewContentSection.Content>
+                </vc:ViewContentSection>
+
+            </StackPanel>
+        </vc:ViewContent.Content>
+    </vc:ViewContent>
+    
+</UserControl>

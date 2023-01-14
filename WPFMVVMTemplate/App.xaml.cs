@@ -1,12 +1,5 @@
-﻿using Microsoft.Windows.Themes;
-using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Globalization;
-using System.Linq;
+﻿using System.Globalization;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows;
 using WPFMVVMTemplate.MVVM.ViewModels;
 using WPFMVVMTemplate.Themes;
@@ -35,9 +28,9 @@ namespace WPFMVVMTemplate
         private void Application_Startup(object sender, StartupEventArgs e)
         {
             _app.Theme = (ThemeViewModel)Current.FindResource("Theme");
-            _app.SetTheme(DefThemes.Dark);
+            if (_app.Settings.Theme == "Dark") _app.SetTheme(DefThemes.Dark); else _app.SetTheme(DefThemes.Light);
 
-            _app.NavigationStore.CurrentViewModel = new SettingsViewModel(_app);
+            _app.NavigationStore.CurrentViewModel = new HomeViewModel(_app);
 
             MainWindow = new MainWindow() { DataContext = new MainViewModel(_app) };
             MainWindow.Show();

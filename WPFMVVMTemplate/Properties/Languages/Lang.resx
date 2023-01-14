@@ -117,13 +117,133 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="darkTheme" xml:space="preserve">
-    <value>Dark theme</value>
+  <data name="button" xml:space="preserve">
+    <value>Button</value>
   </data>
-  <data name="lightTheme" xml:space="preserve">
-    <value>Light theme</value>
+  <data name="buttons" xml:space="preserve">
+    <value>Buttons</value>
+  </data>
+  <data name="checkBox" xml:space="preserve">
+    <value>Check box</value>
+  </data>
+  <data name="comboBox" xml:space="preserve">
+    <value>Combo box</value>
+  </data>
+  <data name="dark" xml:space="preserve">
+    <value>Dark</value>
+  </data>
+  <data name="defCheckBox" xml:space="preserve">
+    <value>Default check box</value>
+  </data>
+  <data name="defComboBox" xml:space="preserve">
+    <value>Default combo box</value>
+  </data>
+  <data name="defHorizontalSlider" xml:space="preserve">
+    <value>Default horizontal slider</value>
+  </data>
+  <data name="defProgressBar" xml:space="preserve">
+    <value>Default progress bar</value>
+  </data>
+  <data name="defRadioButton" xml:space="preserve">
+    <value>Default radio button</value>
+  </data>
+  <data name="defTabControl" xml:space="preserve">
+    <value>Defeault tab control</value>
+  </data>
+  <data name="defToolTip" xml:space="preserve">
+    <value>Default tool tip</value>
+  </data>
+  <data name="defVerticalSlider" xml:space="preserve">
+    <value>Default vertical slider</value>
+  </data>
+  <data name="deleteButton" xml:space="preserve">
+    <value>Delete button</value>
+  </data>
+  <data name="disabled" xml:space="preserve">
+    <value>Disabled</value>
+  </data>
+  <data name="enabled" xml:space="preserve">
+    <value>Enabled</value>
+  </data>
+  <data name="english" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="finnish" xml:space="preserve">
+    <value>Finnish</value>
+  </data>
+  <data name="header" xml:space="preserve">
+    <value>Header</value>
+  </data>
+  <data name="iconButton" xml:space="preserve">
+    <value>Icon button</value>
+  </data>
+  <data name="iconToggleButton" xml:space="preserve">
+    <value>Icon toggle button</value>
+  </data>
+  <data name="item" xml:space="preserve">
+    <value>Item</value>
+  </data>
+  <data name="language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="light" xml:space="preserve">
+    <value>Light</value>
+  </data>
+  <data name="loading" xml:space="preserve">
+    <value>Loading</value>
+  </data>
+  <data name="message" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="messageText" xml:space="preserve">
+    <value>Message text</value>
+  </data>
+  <data name="messageTitle" xml:space="preserve">
+    <value>Message title</value>
+  </data>
+  <data name="notification" xml:space="preserve">
+    <value>Notification</value>
+  </data>
+  <data name="notifications" xml:space="preserve">
+    <value>Notifications</value>
+  </data>
+  <data name="notificationText" xml:space="preserve">
+    <value>Notification text</value>
+  </data>
+  <data name="progressBar" xml:space="preserve">
+    <value>Progress bar</value>
+  </data>
+  <data name="radioButton" xml:space="preserve">
+    <value>Radio button</value>
   </data>
   <data name="restartText" xml:space="preserve">
-    <value>Restart required to new language selection to take effect.</value>
+    <value>The application must be restarted for the selected language to take effect.</value>
+  </data>
+  <data name="show" xml:space="preserve">
+    <value>Show</value>
+  </data>
+  <data name="slider" xml:space="preserve">
+    <value>Slider</value>
+  </data>
+  <data name="switch" xml:space="preserve">
+    <value>Switch</value>
+  </data>
+  <data name="switchSingleColor" xml:space="preserve">
+    <value>Single color switch</value>
+  </data>
+  <data name="tabControl" xml:space="preserve">
+    <value>Tab control</value>
+  </data>
+  <data name="theme" xml:space="preserve">
+    <value>Theme</value>
+  </data>
+  <data name="toggleButtons" xml:space="preserve">
+    <value>Toggle buttons</value>
+  </data>
+  <data name="toolTip" xml:space="preserve">
+    <value>Tool tip</value>
+  </data>
+  <data name="toolTipOnLabel" xml:space="preserve">
+    <value>Tool tip on label</value>
   </data>
 </root>
