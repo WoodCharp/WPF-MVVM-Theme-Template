@@ -1,3 +1,5 @@
+Discovered AvaloniaUI. This project is done.
+
 # WPF-MVVM-Theme-Template
 
 WPF MVVM Template with theme control. .NET 6
